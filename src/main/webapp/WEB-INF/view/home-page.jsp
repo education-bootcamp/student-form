@@ -27,7 +27,7 @@
                     <td>${student.salary}</td>
                     <td>
                         <a href="edit-student/${student.id}" class="btn btn-success">Update</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
+                        <a href="delete-student/${student.id}" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 </c:forEach>

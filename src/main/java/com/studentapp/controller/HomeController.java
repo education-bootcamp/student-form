@@ -45,6 +45,12 @@ public class HomeController {
     @RequestMapping(path = "/modify-student", method = RequestMethod.POST)
     public String modifyStudent(@ModelAttribute Student student){
         studentDao.updateStudent(student);
-        return "home-page";
+        return "redirect:/home";
+    }
+
+    @RequestMapping(path = "/delete-student/{id}")
+    public String deleteStudent(@PathVariable long id){
+        studentDao.deleteStudent(id);
+        return "redirect:/home";
     }
 }
