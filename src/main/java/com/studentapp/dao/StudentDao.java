@@ -1,6 +1,7 @@
 package com.studentapp.dao;
 
 import com.studentapp.entity.Student;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
