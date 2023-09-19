@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Getter
 @Setter
@@ -13,6 +14,7 @@ import javax.persistence.Id;
 @ToString
 //@Data -> dont use this with @entity
 @Entity
+@Table
 public class Student {
     @Id
     private long id;
