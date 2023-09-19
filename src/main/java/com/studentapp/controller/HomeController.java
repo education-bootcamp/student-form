@@ -42,4 +42,9 @@ public class HomeController {
         model.addAttribute("student",student);
         return "student-edit";
     }
+    @RequestMapping(path = "/modify-student", method = RequestMethod.POST)
+    public String modifyStudent(@ModelAttribute Student student){
+        studentDao.updateStudent(student);
+        return "home-page";
+    }
 }

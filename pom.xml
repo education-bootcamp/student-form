@@ -39,6 +39,8 @@
       <version>5.6.15.Final</version>
     </dependency>
 
+
+
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
@@ -50,7 +52,11 @@
       <artifactId>servlet-api</artifactId>
       <version>2.5</version>
     </dependency>
-
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>javax.servlet.jsp-api</artifactId>
+      <version>2.3.3</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
