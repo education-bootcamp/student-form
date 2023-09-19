@@ -2,27 +2,36 @@ package com.studentapp.dao.impl;
 
 import com.studentapp.dao.StudentDao;
 import com.studentapp.entity.Student;
+import org.springframework.orm.hibernate5.HibernateTemplate;
 
+import java.beans.Customizer;
 import java.util.List;
 
 public class StudentDaoImpl implements StudentDao {
+
+    private HibernateTemplate hibernateTemplate;
+
     public boolean saveStudent(Student student) {
-        return false;
+        hibernateTemplate.save(student);
+        return true;
     }
 
     public boolean updateStudent(Student student) {
-        return false;
+        hibernateTemplate.update(student);
+        return true;
     }
 
     public Student getStudent(long id) {
-        return null;
+       return hibernateTemplate.get(Student.class,id);
     }
 
     public boolean deleteStudent(long id) {
-        return false;
+        Student student = hibernateTemplate.get(Student.class, id);
+        hibernateTemplate.delete(student);
+        return true;
     }
 
     public List<Student> getAllStudents() {
-        return null;
+       return hibernateTemplate.loadAll(Student.class);
     }
 }
