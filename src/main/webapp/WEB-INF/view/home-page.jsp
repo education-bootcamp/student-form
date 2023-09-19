@@ -1,6 +1,6 @@
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page isELIgnored="false"%>
 <jsp:include page="header.jsp"/>
 
 <div class="container">
@@ -19,7 +19,9 @@
                 <tbody>
                 <c:forEach items="${students}" var="student">
                 <tr>
-                    <td>${student.id}</td>
+                    <td>
+                        <c:out value="${student.id}"/>
+                    </td>
                     <td>${student.name}</td>
                     <td>${student.address}</td>
                     <td>${student.salary}</td>
